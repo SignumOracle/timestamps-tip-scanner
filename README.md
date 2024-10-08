@@ -1,10 +1,10 @@
 ### Scan timestamps for Autopay tips
 
 Steps:
-
-```shell
+```
 python3 -m venv venv
 source venv/bin/activate
+git clone https://github.com/SignumOracle/timestamps-tip-scanner.git
 pip install -e .
 ```
 
@@ -17,29 +17,42 @@ chained add <choose-acct-name> <private-key>
 
 First scan oracle for your reports:
 
+Linux:
 ```shell
-scanner scan <chain-id> -a <acct-name> --start-block <block-number>
+scanner scan 369 -a PulsechainAccount --start-block 21610542
+```
+Windows:
+```shell
+python /mnt/your/path/to/tenv/bin/scanner scan 369 -a PulsechainAccount --start-block 21610542
 ```
 
 Then, to claim tips:
 
 - one time tips:
 
+Linux:
 ```shell
-scanner claim-one-time-tip <chain-id> <acct-name>
+scanner claim-one-time-tip 369 -a PulsechainAccount
+```
+Windows:
+```shell
+python /mnt/your/path/to/tenv/bin/scanner claim-one-time-tip 369 -a PulsechainAccount
 ```
 
 - feed tips:
 
+Linux:
 ```shell
-scanner claim-tip <chain-id> -a <acct-name>
+scanner claim-tip 369 -a PulsechainAccount
+```
+Windows:
+```shell
+python /mnt/your/path/to/tenv/bin/scanner claim-tip 369 -a PulsechainAccount
 ```
 
 ###### Supported Networks:
 
-- 137 (polygon)
 - 369 (pulsechain)
-- 80001 (mumbai)
 
 ###### API
 
