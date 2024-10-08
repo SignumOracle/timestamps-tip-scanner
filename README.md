@@ -8,10 +8,10 @@ git clone https://github.com/SignumOracle/timestamps-tip-scanner.git
 pip install -e .
 ```
 
-pre-requisite
+prerequisite
 
 ```shell
-# register address to keyfile
+# register address to keyfile, if you have already created an account with Telliot, you can skip this step.
 chained add <choose-acct-name> <private-key>
 ```
 
